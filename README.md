@@ -74,9 +74,72 @@ Series_Folder/
 ## Requirements
 
 - **Python 3.8+** (Standard library only — no `pip` dependencies needed)
-- **[FFmpeg](https://ffmpeg.org/download.html)** and **FFprobe** installed and added to system `PATH`
+- **FFmpeg & FFprobe** (Required on system `PATH`)
 
-Verify your FFmpeg installation:
+---
+
+## Installing FFmpeg
+
+FFmpeg and FFprobe must be installed and accessible from your command line (`PATH`).
+
+### Windows
+
+#### Method 1: Using Package Manager (Recommended)
+Open PowerShell or Command Prompt and run one of the following:
+
+```powershell
+# Windows Package Manager (built into Windows 10/11)
+winget install Gyan.FFmpeg
+
+# Chocolatey
+choco install ffmpeg
+
+# Scoop
+scoop install ffmpeg
+```
+
+#### Method 2: Manual Installation & Adding to PATH
+1. Download `ffmpeg-release-essentials.zip` from [gyan.dev FFmpeg Builds](https://www.gyan.dev/ffmpeg/builds/) or [official FFmpeg download page](https://ffmpeg.org/download.html).
+2. Extract the archive (e.g., to `C:\ffmpeg`).
+3. Add `C:\ffmpeg\bin` to your system `PATH`:
+   - Press <kbd>Win</kbd> + <kbd>S</kbd>, search for **Environment Variables**, and select **Edit the system environment variables**.
+   - Click **Environment Variables...** button.
+   - Under **User variables** or **System variables**, select **Path** and click **Edit**.
+   - Click **New**, enter `C:\ffmpeg\bin`, and click **OK**.
+4. Restart your terminal or command prompt.
+
+---
+
+### macOS
+
+Install via [Homebrew](https://brew.sh/):
+
+```bash
+brew install ffmpeg
+```
+
+---
+
+### Linux
+
+Install via package manager:
+
+```bash
+# Ubuntu / Debian
+sudo apt update && sudo apt install -y ffmpeg
+
+# Arch Linux
+sudo pacman -S ffmpeg
+
+# Fedora
+sudo dnf install ffmpeg
+```
+
+---
+
+### Verify Installation
+
+Open a new terminal window and verify both tools are found:
 
 ```bash
 ffmpeg -version
