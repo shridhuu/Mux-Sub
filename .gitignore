@@ -1,6 +1,46 @@
+# Python bytecode and caches
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
 *.log
 *.tmp
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Media and video files (do not commit raws or outputs)
+*.mkv
+*.mp4
+*.m4v
+*.mov
+*.avi
+*.webm
+
+# Subtitles and fonts
+sub/
+*.ass
+*.ssa
+*.srt
+*.vtt
+*.sub
+*.ttf
+*.otf
+*.ttc
+
+# Temporary muxing and fix files
+.mux_*.mkv
+.fix_*.mkv
+.jump_points.ffmeta
+temp_*
+test.mkv
+
+# OS and Editor metadata
 .DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
